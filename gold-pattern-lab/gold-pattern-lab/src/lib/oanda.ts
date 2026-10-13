@@ -100,9 +100,9 @@ export async function fetchOpenPositions(): Promise<OpenPosition[]> {
   const json = await res.json();
   return (json.positions ?? []).map((p: Record<string, unknown>) => ({
     instrument: p.instrument as string,
-    longUnits: +(p.long as { units?: string }).units ?? 0,
-    shortUnits: +(p.short as { units?: string }).units ?? 0,
-    unrealizedPL: +p.unrealizedPL,
+    longUnits: Number((p.long as { units?: string } | undefined)?.units ?? 0),
+    shortUnits: Number((p.short as { units?: string } | undefined)?.units ?? 0),
+    unrealizedPL: Number(p.unrealizedPL),
   }));
 }
 
