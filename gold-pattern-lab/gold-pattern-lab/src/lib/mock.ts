@@ -93,7 +93,7 @@ export function mockPlaceOrder(input: {
     stopLoss,
     takeProfit,
     openTime: new Date().toISOString(),
-    realizedClosedToday: mockState.position?.realizedClosedToday ?? 0,
+    realizedClosedToday: 0,
   };
   mockState.lastFill = { units: input.units, price: entry, time: new Date().toISOString() };
   return { ok: true };
