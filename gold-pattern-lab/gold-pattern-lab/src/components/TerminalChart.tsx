@@ -10,7 +10,7 @@ import {
   type IChartApi,
   type ISeriesApi,
   type UTCTimestamp,
-  type ISeriesMarkersPluginApi,
+  type Time,
 } from "lightweight-charts";
 import type { Candle, PatternSignal } from "@/lib/types";
 import type { IndicatorSeries } from "@/lib/indicators";
@@ -80,7 +80,7 @@ export default function TerminalChart({
   const rsiChartRef = useRef<IChartApi | null>(null);
   const macdChartRef = useRef<IChartApi | null>(null);
   const seriesRef = useRef<ISeriesApi<"Candlestick"> | null>(null);
-  const markersRef = useRef<ISeriesMarkersPluginApi<"Candlestick"> | null>(null);
+  const markersRef = useRef<ISeriesMarkersPluginApi<Time> | null>(null);
   const auxRef = useRef<ISeriesApi<"Line">[]>([]);
   const posLinesRef = useRef<{ id: string; remove: () => void }[]>([]);
   const syncedRef = useRef(false);
