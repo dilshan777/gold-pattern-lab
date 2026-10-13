@@ -148,7 +148,7 @@ export default function BacktestPage() {
                     <td className="px-3 py-2 text-[#8b93a1]">{i + 1}</td>
                     <td
                       className="px-3 py-2 font-medium"
-                      style={{ color: t.direction === "long" ? "#22c55e" : "#ef4444" }}
+                      style={{ color: t.direction === "bullish" ? "#22c55e" : "#ef4444" }}
                     >
                       {t.direction.toUpperCase()}
                     </td>
