@@ -69,7 +69,8 @@ let mockState: {
   balance: number;
   position: MockPosition | null;
   lastFill: { units: number; price: number; time: string } | null;
-} = { balance: 100_000, position: null, lastFill: null };
+  realizedClosedToday: number;
+} = { balance: 100_000, position: null, lastFill: null, realizedClosedToday: 0 };
 
 export function getMockState() {
   return mockState;
