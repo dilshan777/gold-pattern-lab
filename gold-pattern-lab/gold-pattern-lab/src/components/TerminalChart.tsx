@@ -81,7 +81,7 @@ export default function TerminalChart({
   const rsiChartRef = useRef<IChartApi | null>(null);
   const macdChartRef = useRef<IChartApi | null>(null);
   const seriesRef = useRef<ISeriesApi<"Candlestick"> | null>(null);
-  const markersRef = useRef<ReturnType<typeof createSeriesMarkers> | null>(null);
+  const markersRef = useRef<ISeriesMarkersPluginApi<Time> | null>(null);
   const auxRef = useRef<ISeriesApi<"Line">[]>([]);
   const posLinesRef = useRef<{ id: string; remove: () => void }[]>([]);
   const syncedRef = useRef(false);
